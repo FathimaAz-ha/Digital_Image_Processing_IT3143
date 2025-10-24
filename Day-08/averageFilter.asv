@@ -1,0 +1,5 @@
+imread('rice.png'); %read in the image
+Im = imfilter(I, fspecial('average', [15,15], 'replicate'); %create a filter
+It = I - (Im + 20); %subtract mean image( + constant)
+Ibw = imbinarize(It); 
+subplot(1,2,1) imshow(
