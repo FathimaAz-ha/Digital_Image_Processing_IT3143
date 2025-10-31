@@ -12,7 +12,7 @@ subplot(2,3,3), imshow(Igray), title('Grey Image');
 Ics = imadjust(Igray, stretchlim(Igray, [0.05 0.95]), []);
 subplot(2,3,4), imshow(Ics), title('Contrast Image'); 
 
-IEc = edge(Ics, 'canny');
+IEc = edge(Igray, 'canny');
 subplot(2,3,5), imshow(IEc);
 
 
