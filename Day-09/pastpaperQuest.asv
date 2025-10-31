@@ -1,0 +1,17 @@
+I = imread('yellowlily.jpg');
+figure, imshow(I), title('Original Image'); 
+
+Ihsv = rgb2hsv(I); 
+V = histeq(Ihsv(:, :, 3));
+Ihsv(:, :, 3) = V;
+Iout = hsv2rgb(Ihsv); 
+subplot(1,8,1), imshow(I); 
+subplot(1,8,2), imshow(Iout), title('Equalized Image'); 
+
+Igrey = rgb2grey(I); 
+subplot(1,8,4), imshow(Igrey), title('Grey Image'); 
+
+Ics = imadjust(Igrey, stretchlim(I, [0.05 0.95]), []);
+subplot(1,8,5), imshow(Ics), title('Contrast Image'); 
+
+
