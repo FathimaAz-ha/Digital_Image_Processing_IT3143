@@ -1,0 +1,2 @@
+I = imread('cameraman.tif');
+IEr = edge(I, 'roberts'); %roberts Edge

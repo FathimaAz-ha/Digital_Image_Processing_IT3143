@@ -1,9 +1,0 @@
-I = imread('cameraman.tif');
-B = double(A);
-C = im2double(A);
-
-subplot(2,2,1), imshow(I);
-
-Id = im2double(I);
-
-output =
