@@ -28,9 +28,9 @@ subplot(2,2,4), imshow(output3), title('Gamma = 2.5')
 %=0.15, 0.25, and 0.35 to the converted image and display the resultant
 %image in 2X2 subplot
 
-output4 = 3 * ([1 + 0.15].^Id - 1);
-output5 = 3 * ([1 + 0.25 ].^Id - 1);
-output6 = 3 * ([1 + 0.35].^Id - 1);
+output4 = 3 * (1 + 0.15.^Id - 1);
+output5 = 3 * (1 + 0.25.^Id - 1);
+output6 = 3 * (1 + 0.35.^Id - 1);
 
 subplot(2,2,1), imshow(I), title('Image Original')
 subplot(2,2,2), imshow(output4), title('Alpha = 0.15')
