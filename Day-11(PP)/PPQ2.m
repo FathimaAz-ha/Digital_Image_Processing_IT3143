@@ -30,14 +30,14 @@ E=SubstractTwoImages(D,C);
 subplot(2,2,2),imshow(E),title('SubGray car2,car1 images');
 
 %e
-result = A;   % initialize result image
+result =C;   % initialize result image
 
-[rows, cols] = size(A);
+[rows, cols] = size(C);
 
 for i = 1:rows
     for j = 1:cols
-        if B(i,j) > A(i,j)
-            result(i,j) = B(i,j);
+        if D(i,j) > C(i,j)
+            result(i,j) = D(i,j);
         end
     end
 end
