@@ -1,28 +1,47 @@
-% Read and siplay the original images
+%a
+A = imread('car_1.jpg');
+B = imread('car_2.jpg');
+figure;
+subplot(2,2,1),imshow(A),title('Car 1');
+subplot(2,2,2),imshow(B),title('Car 2');
 
-I1 = imread('car1.png'); 
-I2 = imread('car2.png'); 
+%b
+C=rgb2gray(A);
+D=rgb2gray(B);
+figure;
+subplot(2,2,1),imshow(C),title('Car 1 gray');
+subplot(2,2,2),imshow(D),title('Car 2 gray');
 
-I1grey = rgb2gray(I1); 
-I2grey = rgb2gray(I2); 
+%c
+function X=SubstractTwoImages(img1,img2)
+X=img1-img2;
+end
 
-figure; 
-subplot(2,1,1), imshow(I1); 
-subplot(2,2,2), imshow(I2); 
+E=SubstractTwoImages(A,B);
+figure;
+subplot(2,2,1),imshow(E),title('Substract images');
 
-subtractTwoImages(I1grey, I2grey);
-subtractTwoImages(I2grey, I1grey); 
+%d
+E=SubstractTwoImages(C,D);
+figure;
+subplot(2,2,1),imshow(E),title('SubGray car1,car2 images');
 
-%replacing car1 pixel by car2  
-for i = size(I1, 1)
-    for j = 1 : size(I1, 2)
+E=SubstractTwoImages(D,C);
+subplot(2,2,2),imshow(E),title('SubGray car2,car1 images');
 
-        if I1(i,j) < I2(i,j)
-            I2(i,j) = I1(i,j); 
+%e
+result = A;   % initialize result image
+
+[rows, cols] = size(A);
+
+for i = 1:rows
+    for j = 1:cols
+        if B(i,j) > A(i,j)
+            result(i,j) = B(i,j);
         end
     end
 end
 
-function sub = subtractTwoImages(img1, img2)
-sub = img1-img2;
-end
+figure;
+subplot(2,2,1),imshow(result);
+title('Pixels copied where car2 > car1');
