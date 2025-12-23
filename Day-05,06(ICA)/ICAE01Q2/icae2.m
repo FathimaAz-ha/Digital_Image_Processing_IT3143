@@ -15,11 +15,11 @@ D = rgb2gray(b);
 subplot(2,4,4);
 imshow(D);
 
-E = subtractTwoImages(a,b);
+E = subtractTwoImages(c,d);
 subplot(2,4,5); 
 imshow(E); 
 
-F =  subtractTwoImages(b,a);
+F =  subtractTwoImages(d,c);
 subplot(2,4,6); 
 imshow(E); 
 
