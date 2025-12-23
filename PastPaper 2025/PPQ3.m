@@ -27,6 +27,6 @@ I = imread('rice.png');
 Iopen = imopen(I, se);
 Isub = I - Iopen;
 
-imadjust(I, stretchlim(I, [0.05 0.95]), []); 
+imadjust(Isub); 
 
 
