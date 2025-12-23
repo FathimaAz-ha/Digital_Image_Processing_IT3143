@@ -1,4 +1,4 @@
-%closoing - first do the dilation and do the ersion
+%closoing - first do the dilation and do the erosion
 
 bw = imread('text.png');  %read a binary image
 se = [0 1 0; 1 1 1; 0 1 0]; %define structuring element

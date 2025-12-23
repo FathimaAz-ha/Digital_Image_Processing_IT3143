@@ -1,5 +1,4 @@
-%lablacian filter - 
-%first you have to use grey scale image
+%lablacian of gaussian filter - 
 
 I = rgb2gray(imread('peppers.png'));
 k = fspecial('log', [10 10], 3.0); %create laplacian filter

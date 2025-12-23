@@ -4,7 +4,7 @@
 
 A= imread('circles.png'); 
 
-se = strel('disk', 5); 
+se = strel('suqare', 5); 
 bw1 = imerode(A, se); 
 bw2 = A - bw1; 
 
@@ -13,6 +13,20 @@ bw2 = A - bw1;
 bw = bwperim(A); 
 
 %Displaying the outputs
+figure; 
 subplot(1,3,1), imshow(A);
 subplot(1,3,2), imshow(bw); 
 subplot(1,3,3), imshow(bw2); 
+
+
+
+%b
+%Applying the opening
+I = imread('rice.png'); 
+
+Iopen = imopen(I, se);
+Isub = I - Iopen;
+
+imadjust(I, stretchlim(I, [0.05 0.95]), []); 
+
+

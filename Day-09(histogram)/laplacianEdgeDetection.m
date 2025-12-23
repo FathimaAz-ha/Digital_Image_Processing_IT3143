@@ -9,3 +9,44 @@ IEl = imfilter(double(I),k, 'symmetric'); %laplacian edges
 subplot(1,2,1), imshow(I); 
 subplot(1,2,2), imshow(IEl); 
 
+laplacian gaussian 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
