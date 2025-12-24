@@ -1,4 +1,4 @@
-%Exponential Transforamtion O = c * (1+ A.^I-1]
+%Exponential Transforamtion O = c * (((1+ A).^(I))-1);
 I = imread('cameraman.tif');
 
 subplot(2,2,1), imshow(I);
